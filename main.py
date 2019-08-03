@@ -26,7 +26,7 @@ def get_sign_by_id(json_list, sign_id):
 sign_list = list()
 
 print("Importing Signatures...")
-with open('asset/' + SIGN_FILE, 'r') as json_file:
+with open(SIGN_FILE, 'r') as json_file:
     json = json.load(json_file)
     for sign in json[SIGNATURES]:
         sign_list.append(sign)
@@ -34,7 +34,7 @@ print("Importing Done.")
 
 print("Analyzing log files...")
 alert = dict()
-with open('asset/' + LOG_FILE, 'rb') as log_file:
+with open(LOG_FILE, 'rb') as log_file:
     line = str(log_file.readline().strip())[2:-1]
 
     # Read the number of lines in log file
