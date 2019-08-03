@@ -6,3 +6,4 @@ $ chmod a+x main.py
 
 Run file:
 $ ./main.py
+$ python3 main.py
