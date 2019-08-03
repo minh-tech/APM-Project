@@ -1,0 +1,61 @@
+{
+	"signatures": [
+		{
+			"id": "1",
+			"title": "Network Scans",
+			"description": "Detect vw6110.exe download",
+			"logsource": {
+				"category": "firewall"
+			},
+			"detection": {
+				"selection": {
+					"protocol": "URL",
+					"destination_port": "80",
+					"destination_ip": "121.0.140.90",
+					"content": "psd.v-hinet.co.kr(/update/vw6110.exe)"
+				},
+				"condition": "selection",
+				"falsepositives": "unlikely",
+				"level": "high"
+			}
+		},
+		{
+			"id": "2",
+			"title": "Network Scans",
+			"description": "Detect ianygo.exe download",
+			"logsource": {
+				"category": "firewall"
+			},
+			"detection": {
+				"selection": {
+					"protocol": "URL",
+					"destination_port": "80",
+					"destination_ip": "104.25.8.5",
+					"content": "www.tenorshare.net(/downloads/ianygo.exe)"
+				},
+				"condition": "selection",
+				"falsepositives": "unlikely",
+				"level": "high"
+			}
+		},
+		{
+			"id": "3",
+			"title": "Network Scans",
+			"description": "Detect freshftp.exe download",
+			"logsource": {
+				"category": "firewall"
+			},
+			"detection": {
+				"selection": {
+					"protocol": "URL",
+					"destination_port": "80",
+					"destination_ip": "198.55.116.15",
+					"content": "freshwebmaster.com(/files/freshftp.exe)"
+				},
+				"condition": "selection",
+				"falsepositives": "unlikely",
+				"level": "high"
+			}
+		}
+	]
+}
